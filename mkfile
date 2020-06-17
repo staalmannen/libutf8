@@ -76,8 +76,8 @@ CFLAGS= -c -I. -I./src -D_POSIX_SOURCE -D_SUSV2_SOURCE -D_BSD_EXTENSION \
 %.$O: src/stdio/%.c
 	$CC $CFLAGS src/stdio/$stem.c
 	
-%.$O: extras/%.c
-	$CC $CFLAGS extras/$stem.c
+#%.$O: extras/%.c
+#	$CC $CFLAGS extras/$stem.c
 
 install:V:
     mkdir /sys/include/ape/utf8
