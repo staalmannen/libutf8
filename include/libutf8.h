@@ -19,6 +19,8 @@
 #ifndef _LIBUTF8_H
 #define _LIBUTF8_H
 
+#pragma lib "/$M/lib/ape/libutf8.a"
+
 #include <utf8/types.h>
 #include <utf8/stdlib.h>
 #include <utf8/locale.h>
