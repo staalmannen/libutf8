@@ -18,8 +18,7 @@ OFILES= locale_is.$O mb_cur_max.$O setlocale.$O mbsinit.$O \
   integer-parse.$O wcstol.$O wcstoul.$O wcstoll.$O wcstoull.$O \
   number-parse.$O wcstof.$O wcstod.$O wcstold.$O \
   fgetwc.$O fgetws.$O getwchar.$O ungetwc.$O \
-  fputwc.$O fputws.$O putwchar.$O \
-  fwide.$O \
+  fputwc.$O fputws.$O putwchar.$O fwide.$O \
   printf-args.$O printf-parse.$O wprintf-parse.$O \
   vfprintf.$O vprintf.$O vsprintf.$O vsnprintf.$O \
   fprintf.$O printf.$O sprintf.$O snprintf.$O \
@@ -28,88 +27,22 @@ OFILES= locale_is.$O mb_cur_max.$O setlocale.$O mbsinit.$O \
 
 
 HFILES= \
-    /sys/include/ape/libutf8.h \
-    /sys/include/ape/wchar.h \
-    /sys/include/ape/wctype.h 
-    
-MANFILES= \
-    MB_CUR_MAX \
-    MB_LEN_MAX \
-    btowc \
-    fgetwc \
-    fgetws \
-    fputwc \
-    fputws \
-    fwide \
-    fwprintf \
-    getwchar \
-    iswalnum \
-    iswalpha \
-    iswblank \
-    iswcntrl \
-    iswctype \
-    iswdigit \
-    iswgraph \
-    iswlower \
-    iswprint \
-    iswpunct \
-    iswspace \
-    iswupper \
-    iswxdigit \
-    mblen \
-    mbrlen \
-    mbrtowc \
-    mbsinit \
-    mbsnrtowcs \
-    mbsrtowcs \
-    mbstowcs \
-    mbtowc \
-    printf \
-    putwchar \
-    setlocale \
-    swprintf \
-    towctrans \
-    towlower \
-    towupper \
-    ungetwc \
-    vfwprintf \
-    vswprintf \
-    vwprintf \
-    wcpcpy \
-    wcpncpy \
-    wcrtomb \
-    wcscasecmp \
-    wcscat \
-    wcschr \
-    wcscmp \
-    wcscpy \
-    wcscspn \
-    wcsdup \
-    wcslen \
-    wcsncasecmp \
-    wcsncat \
-    wcsncmp \
-    wcsncpy \
-    wcsnlen \
-    wcsnrtombs \
-    wcspbrk \
-    wcsrchr \
-    wcsrtombs \
-    wcsspn \
-    wcsstr \
-    wcstok \
-    wcstombs \
-    wcswidth \
-    wctob \
-    wctomb \
-    wctrans \
-    wctype \
-    wcwidth \
-    wmemchr \
-    wmemcmp \
-    wmemcpy \
-    wmemmove \
-    wmemset \
+/sys/include/ape/libutf8.h \
+/sys/include/ape/wchar.h \
+/sys/include/ape/wctype.h
+
+
+MANFILES= MB_CUR_MAX MB_LEN_MAX btowc fgetwc fgetws fputwc \
+    fputws fwide fwprintf getwchar iswalnum iswalpha iswblank \
+    iswcntrl iswctype iswdigit iswgraph iswlower iswprint iswpunct \
+    iswspace iswupper iswxdigit mblen mbrlen mbrtowc mbsinit mbsnrtowcs \
+    mbsrtowcs mbstowcs mbtowc printf putwchar setlocale swprintf \
+    towctrans towlower towupper ungetwc fwprintf vswprintf vwprintf \
+    wcpcpy wcpncpy wcrtomb wcscasecmp wcscat wcschr wcscmp wcscpy \
+    wcscspn wcsdup wcslen wcsncasecmp wcsncat wcsncmp wcsncpy \
+    wcsnlen wcsnrtombs wcspbrk wcsrchr wcsrtombs wcsspn \
+    wcsstr wcstok wcstombs wcswidth wctob wctomb wctrans \
+    wctype wcwidth wmemchr wmemcmp wmemcpy wmemmove wmemset \
     wprintf
 
 </sys/src/cmd/mksyslib
