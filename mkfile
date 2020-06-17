@@ -26,12 +26,6 @@ OFILES= locale_is.$O mb_cur_max.$O setlocale.$O mbsinit.$O \
   fwprintf.$O wprintf.$O swprintf.$O
 
 
-HFILES= \
-/sys/include/ape/libutf8.h \
-/sys/include/ape/wchar.h \
-/sys/include/ape/wctype.h
-
-
 MANFILES= MB_CUR_MAX MB_LEN_MAX btowc fgetwc fgetws fputwc \
     fputws fwide fwprintf getwchar iswalnum iswalpha iswblank \
     iswcntrl iswctype iswdigit iswgraph iswlower iswprint iswpunct \
@@ -81,6 +75,9 @@ CFLAGS= -c -I. -I./src -D_POSIX_SOURCE -D_SUSV2_SOURCE -D_BSD_EXTENSION \
 
 install:V:
     mkdir /sys/include/ape/utf8
+    cp include/wchar.h /sys/include/ape/
+    cp include/wctype.h /sys/include/ape/
+    cp include/libutf8.h /sys/include/ape/
     cp include/utf8/*.h /sys/include/ape/utf8/
     mkdir -p /sys/man/3ape
     for (i in $MANFILES) @{
@@ -94,7 +91,9 @@ nuke:V:
 	rm -f $LIB
 	rm -f /$objtype/lib/ape/libutf8.a
 	rm -rf /sys/include/ape/utf8
-	rm -f $HFILES
+    rm -f /sys/include/ape/wchar.h
+    rm -f /sys/include/ape/wctype.h
+    rm -f /sys/include/ape/libutf8.h
     for (i in $MANFILES) @{
     rm -f /sys/man/3ape/$i
     }
