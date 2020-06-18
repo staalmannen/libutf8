@@ -74,6 +74,7 @@ CFLAGS= -c -I. -I./src -I./include -D_POSIX_SOURCE -D_SUSV2_SOURCE -D_BSD_EXTENS
 #	$CC $CFLAGS extras/$stem.c
 
 install:V:
+    cp libutf8.a /$objtype/lib/ape/
     mkdir /sys/include/ape/utf8
     cp include/wchar.h /sys/include/ape/
     cp include/wctype.h /sys/include/ape/
